@@ -1,0 +1,21 @@
+{
+  "name": "portfolio1",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "default": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.9.3"
+  },
+  "main": "index.js",
+  "keywords": []
+}
