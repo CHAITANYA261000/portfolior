@@ -97,7 +97,7 @@ body {
 }
 
 p {
-  color: #666;
+  color: #000;
 }
 
 /* This is BAD for accessibility! Don't do in the real world! */
