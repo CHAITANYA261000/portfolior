@@ -10,23 +10,31 @@ const nav = document.querySelector('.nav');
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
+const test = document.querySelector('.buttom');
 
 ///////////////////////////////////////
 // Modal window
 
-const openModal = function (e) {
-  e.preventDefault();
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
+// const openModal = function (e) {
+//   e.preventDefault();
+//   modal.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+// };
 
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
 
-btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 
+
+const resume = function()
+{
+  var win = window.open("https://www.dropbox.com/scl/fi/qsv96vgecerwdfqdbylic/ChaitanyaErella.docx?rlkey=rge6aunmmsul29ri5iewwlo4q&dl=0", "");
+  win.focus();
+}
+
+btnsOpenModal.forEach(btn => btn.addEventListener('click', resume));
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
@@ -40,18 +48,6 @@ document.addEventListener('keydown', function (e) {
 // Button scrolling
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
-  // Scrolling
-  // window.scrollTo(
-  //   s1coords.left + window.pageXOffset,
-  //   s1coords.top + window.pageYOffset
-  // );
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
-
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
@@ -120,7 +116,6 @@ const handleHover = function (e) {
 // Passing "argument" into handler
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
-
 ///////////////////////////////////////
 // Sticky navigation: Intersection Observer API
 
