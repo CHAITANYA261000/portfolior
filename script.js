@@ -30,7 +30,7 @@ const closeModal = function () {
 
 const resume = function()
 {
-  var win = window.open("https://www.dropbox.com/scl/fi/qsv96vgecerwdfqdbylic/ChaitanyaErella.docx?rlkey=rge6aunmmsul29ri5iewwlo4q&dl=0", "");
+  var win = window.open("https://www.dropbox.com/scl/fi/qsv96vgecerwdfqdbylic/ChaitanyaErella.docx?rlkey=rge6aunmmsul29ri5iewwlo4q&dl=0", "Resume");
   win.focus();
 }
 
@@ -49,6 +49,11 @@ document.addEventListener('keydown', function (e) {
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
   section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+document.querySelector('.prof').addEventListener('click', function() {
+  // Redirect to the desired page
+  window.location.href = '/profession/profession.html';
 });
 
 ///////////////////////////////////////

@@ -1,0 +1,187 @@
+:root {
+    --color-primary: #ffcd3e;
+    --color-secondary: #ffcb03;
+    --color-tertiary: #ff585f;
+    --color-primary-darker: #4bbb7d;
+    --color-secondary-darker: #ffbb00;
+    --color-tertiary-darker: #fd424b;
+    --color-primary-opacity: #5ec5763a;
+    --color-secondary-opacity: #ffcd0331;
+    --color-tertiary-opacity: #ff58602d;
+    --gradient-primary: linear-gradient(to top left, #ffbd00, #ff4730);
+    --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.9;
+    background-color: #f3f3f3;
+    background-color: #000;
+  }
+
+  
+
+  .btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    padding: 1.25rem 4.5rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #00ff66;
+  }
+  
+  .btn--text {
+    display: inline-block;
+    background: none;
+    font-size: 1.7rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: #ff3e3e;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  p {
+    color: #000;
+  }
+  
+  /* This is BAD for accessibility! Don't do in the real world! */
+  button:focus {
+    outline: none;
+  }
+  
+  img {
+    transition: filter 0.5s;
+  }
+  
+  .lazy-img {
+    filter: blur(20px);
+  }
+  
+  /* NAVIGATION */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9rem;
+    width: 100%;
+    padding: 0 6rem;
+    z-index: 100;
+  }
+  
+  .material-symbols-outlined{
+    align-items: center;
+  }
+  
+  /* nav and stickly class at the same time */
+  .nav.sticky {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .nav__logo {
+    height: 7.5rem;
+    transition: all 0.3s;
+  }
+  
+  .nav__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav__item {
+    margin-left: 4rem;
+  }
+  
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: wheat;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+  }
+  
+  .nav__link--btn:link,
+  .nav__link--btn:visited {
+    padding: 0.8rem 2.5rem;
+    border-radius: 3rem;
+    background-color: var(--color-primary);
+    color: #c8bfbf;
+  }
+
+  .nav__link--btn:hover,
+  .nav__link--btn:active {
+    color: inherit;
+    background-color: #fe5400;
+    color: #dad3d3;
+  }
+
+  .tab__links{
+    box-sizing: border-box;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    
+  }
+  .tab__item{
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    width: 70%;
+    height: 100px;
+    border-radius: 10rem;
+    background-color: #000;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 12px 10px rgb(245 235 235 / 9%);
+   
+  }
+
+  
+  .tab__link{
+    display: flex;
+    font-family: inherit;
+    font-size: 2rem;
+    padding: auto;
+    font-weight: 500;
+    transition: all .3s;
+    text-decoration: none;
+    color: white;
+  }
+  .tab__link:hover {
+    color: rgb(255, 132, 0);
+  }
+
+  
