@@ -15,11 +15,11 @@ const test = document.querySelector('.buttom');
 ///////////////////////////////////////
 // Modal window
 
-// const openModal = function (e) {
-//   e.preventDefault();
-//   modal.classList.remove('hidden');
-//   overlay.classList.remove('hidden');
-// };
+const openModal = function (e) {
+  e.preventDefault();
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
 
 const closeModal = function () {
   modal.classList.add('hidden');
@@ -34,7 +34,7 @@ const resume = function()
   win.focus();
 }
 
-btnsOpenModal.forEach(btn => btn.addEventListener('click', resume));
+btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
